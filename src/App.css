@@ -1,0 +1,113 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.hero-section {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+.hero-title {
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.catalog-header h2 {
+  font-size: 24px;
+  color: #222;
+}
+
+.header-badge-icon {
+  color: #2563eb;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.display-panel {
+  width: 100%;
+}
+
+.empty-state {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+}
+
+.empty-state-icon {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.empty-state h3 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #222;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .catalog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 26px;
+  }
+}

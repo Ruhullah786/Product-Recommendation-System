@@ -1,0 +1,87 @@
+.error-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+  border-left: 4px solid var(--color-accent);
+}
+
+.error-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.error-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.error-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
+  animation: shake 0.5s ease-in-out;
+}
+
+.error-message-text {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Diagnostic / Instructions Box for Key Config */
+.error-diagnostics {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+.error-diagnostics h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 8px;
+}
+
+.error-diagnostics ol {
+  padding-left: 20px;
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.error-diagnostics li {
+  margin-bottom: 6px;
+}
+
+.code-snippet {
+  font-family: monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
