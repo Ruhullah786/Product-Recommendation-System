@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 
 const apiKey = import.meta.env.VITE_GEMINI_API_KEY?.trim();
-
+console.log(JSON.stringify(apiKey));
 console.log("API KEY:", apiKey);
 console.log("API KEY LENGTH:", apiKey?.length);
 
@@ -45,7 +45,7 @@ export async function getRecommendations(userQuery, productsList) {
   // 1. Instantiate the model. We use gemini-1.5-flash for fast and cost-efficient structured output.
   // We provide a system instruction to ground the AI and prevent hallucinations.
  const model = genAI.getGenerativeModel({
-  model: "gemini-2.5-flash",
+  model: "gemini-1.5-flash",
   systemInstruction:
     "You are a professional AI Product Recommender. Analyze the user's request and match it against the provided product list. " +
     "Recommend products ONLY from the provided product list. Do not generate imaginary products. " +
@@ -106,11 +106,7 @@ export async function getRecommendations(userQuery, productsList) {
 
   try {
     // 5. Generate content
-    const result = await model.generateContent({
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
-      generationConfig
-    });
-
+   const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
 
